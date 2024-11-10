@@ -359,3 +359,84 @@ footer h2 {
     text-align: justify;
   }
 }
+
+/* Base Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: coral;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-item {
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 15px;
+}
+
+.nav-item:hover {
+  background-color: #dedede;
+  border-radius: 5px;
+}
+
+/* Navbar Tablet Screens (max-width: 992px) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+}
+
+/* Desktop Screens (min-width: 992px) */
+@media (min-width: 992px) {
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+}
+
+/* Tablet Screens - Medium devices (768px and below) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+    width: 100%; /* Make each item take full width */
+  }
+}
+
+/* Mobile Screens - Small devices (480px and below) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* Optional: Adjust font size for smaller screens */
+  .nav-item {
+    font-size: 14px;
+  }
+}
